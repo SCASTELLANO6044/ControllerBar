@@ -68,10 +68,12 @@ function getCursorPos(e) {
 function moving(e) {
     getCursorPos(e);
     if (dragobj) {
-        oLeft = cursor.x - i1;
-        /* oTop = cursor.y - h1;*/
-        dragobj.style.left = oLeft + 'px';
+
+        value = document.getElementById("myRange").value;
+        dragobj.style.left = value + 'vh';
         /*
+        oLeft = cursor.x - i1;
+        oTop = cursor.y - h1;
         dragobj.style.top = oTop + 'px';
         */
     }
