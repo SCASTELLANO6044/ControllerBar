@@ -71,6 +71,7 @@ function moving(e) {
 
         value = document.getElementById("myRange").value;
         dragobj.style.left = value + 'vh';
+        console.log(value)
         /*
         oLeft = cursor.x - i1;
         oTop = cursor.y - h1;
