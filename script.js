@@ -26,6 +26,13 @@ function makeObjectToDrag(obj) {
     }
 }
 
+function moveObject(){
+    dragobj = document.getElementById('obj');
+    document.onmousedown = startMove;
+    document.onmouseup = drop;
+    document.onmousemove = moving;
+}
+
 function startMove(e) {
     if (dragobj) {
         getCursorPos(e);
@@ -62,9 +69,11 @@ function moving(e) {
     getCursorPos(e);
     if (dragobj) {
         oLeft = cursor.x - i1;
-        oTop = cursor.y - h1;
+        /* oTop = cursor.y - h1;*/
         dragobj.style.left = oLeft + 'px';
+        /*
         dragobj.style.top = oTop + 'px';
+        */
     }
 }
 
