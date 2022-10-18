@@ -5,26 +5,6 @@ var cursor = {
 var dragobj = null,
     h1, i1, oLeft, oTop;
 
-function rel(ob) {
-    if (ob) {
-        return document.getElementById(ob)
-    } else {
-        return null
-    }
-}
-
-function gTxt(ob, txt) {
-    rel(ob).innerHTML = txt;
-}
-
-function makeObjectToDrag(obj) {
-    if (obj) {
-        dragobj = rel(obj.id);
-        document.onmousedown = startMove;
-        document.onmouseup = drop;
-        document.onmousemove = moving;
-    }
-}
 
 function moveObject(){
     dragobj = document.getElementById('obj');
@@ -68,10 +48,8 @@ function getCursorPos(e) {
 function moving(e) {
     getCursorPos(e);
     if (dragobj) {
-
         value = document.getElementById("myRange").value;
         dragobj.style.left = value + 'vh';
-        console.log(value)
         /*
         oLeft = cursor.x - i1;
         oTop = cursor.y - h1;
