@@ -46,6 +46,7 @@ function getCursorPos(e) {
 }
 
 function moving(e) {
+    console.log("Me muevo")
     getCursorPos(e);
     if (dragobj) {
         value = document.getElementById("myRange").value;
